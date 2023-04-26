@@ -10,6 +10,10 @@
   <!--
   Location for CSS if needed. Note, cascade style sheets needs to be hosted on your server, under /css folder.
   -->
+
+  <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+   
    
 
 
@@ -17,20 +21,65 @@
 <body>
   <h1>My first HLS player</h1>
   
-  <!--
-  location for your player window
-  -->
+  <video
+  id="my-player"
+  class="video-js"
+  controls
+  preload="auto"
+  poster="MY_VIDEO_POSTER.jpg"
+  data-setup='{}'>
+<source src= "https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL"></source>
+
+<p class="vjs-no-js">
+  To view this video please enable JavaScript, and consider upgrading to a
+  web browser that
+  <a href="https://videojs.com/html5-video-support/" target="_blank">
+    supports HTML5 video
+  </a>
+</p>
+</video>
+
+<script>
+  var player = videojs('my-player');
+ 
+      function Play() { 
+        player.play();
+  }
+
+  function Pause() { 
+        player.pause();
+  }
+
+  function Stop(){
+        player.pause();
+     player.currentTime(0);   
+       }
+     
+    function Forward_by5(){
+      player.currentTime(player.currentTime() + 5);
+     }
+     
+     function Back_by5(){
+      player.currentTime(player.currentTime() - 5);
+     }
+
+     function Load(id){
+      new_url = document.getElementById(id).value
+      player.src({ type: "application/x-mpegURL", src: new_url });
+     }
+
+</script>
   
-	<button type="button">Play</button>
-	<button type="button">Pause</button>
-	<button type="button">Stop</button>
-	<button type="button">Jump to 5 sec forward</button>
-	<button type="button">Jump to 5 sec backwards</button>	
+<button  onclick="Play()">Play</button>
+<button  onclick="Pause()">Pause</button>
+<button  onclick="Stop()">Stop</button>
+<button  onclick="Forward_by5()">Jump to 5 sec forward</button>
+<button  onclick="Back_by5()">Jump to 5 sec backwards</button>		
 	
 	<p>Playlist</p>
 	
-	<input type="text" name="url1" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
-	<input type="text" name="url2" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button type="button">Load</button><br>
-	<button type="button">Shuffle</button>
+	<input type="text" id="input1" name="url1" size="100" value="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"><button onclick="Load('input1')">Load</button><br>
+	<input type="text" id="input2" size="100" value="https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8"><button onclick="Load('input2')">Load</button><br>
+	
 </body>
 </html>
