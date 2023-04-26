@@ -38,8 +38,16 @@
   </a>
 </p>
 </video>
+
+<script>
+  var player = videojs('my-player');
+ 
+      function Play() { 
+        player.play();
+  }
+</script>
   
-	<button type="button">Play</button>
+<button  onclick="Play()">Play</button>
 	<button type="button">Pause</button>
 	<button type="button">Stop</button>
 	<button type="button">Jump to 5 sec forward</button>
