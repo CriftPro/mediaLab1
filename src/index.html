@@ -49,13 +49,27 @@
   function Pause() { 
         player.pause();
   }
+
+  function Stop(){
+        player.pause();
+     player.currentTime(0);   
+       }
+     
+    function Forward_by5(){
+      player.currentTime(player.currentTime() + 5);
+     }
+     
+     function Back_by5(){
+      player.currentTime(player.currentTime() - 5);
+     }
+
 </script>
   
 <button  onclick="Play()">Play</button>
 <button  onclick="Pause()">Pause</button>
-	<button type="button">Stop</button>
-	<button type="button">Jump to 5 sec forward</button>
-	<button type="button">Jump to 5 sec backwards</button>	
+<button  onclick="Stop()">Stop</button>
+<button  onclick="Forward_by5()">Jump to 5 sec forward</button>
+<button  onclick="Back_by5()">Jump to 5 sec backwards</button>		
 	
 	<p>Playlist</p>
 	
