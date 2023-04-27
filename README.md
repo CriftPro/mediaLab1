@@ -2,6 +2,34 @@
 
 -- UPDATED-- 
 
+Instruction to launch:
+We used node js to lauch the scripts.
+1)Download node js packages.
+2)Download the project file.
+3)Open the console
+4)Open project directory in console
+5) Type :
+node start_server.js
+6) Go to your localhost address, port 8080
+7) See the webpage.
+
+Testing results:
+Tested in mozzila firefox v112.0 and micrsoft edge v112
+Works as intended.
+
+Implemented functions:
+Player
+Button play,pause,stop, forward by 5, back by 5.
+Playlist ( but only m3u8 format)
+Load button
+
+Playlist working:
+Input the link to the m3u8 video.
+Click Load
+Player now will show linked video.
+
+LAB DESCRIPTION:
+
 This lab aims to build your first HTML5 live stream (HLS) player.
 
 There are many open source alternatives. You can try to use as Video.js player as a startup: https://github.com/videojs/video.js
