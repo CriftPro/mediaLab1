@@ -1,15 +1,32 @@
 # mediaLab1
 
+Instructions:
+
+To lauchn you can use node js.
+Download the project and go inside the console.
+In side console, choose project directory.
+Type:
+node start_server.js
+This will laucnh the scripts and then go to localhost port 8080.
+You will see the webpage
+
+Implemented functions:
+Player
+Buttons play,pause,stop, forward by 5, back by 5.
+Playlist ( accept only m3u8 format files)
+Load button ( loads from input link to the player)
+
+
 This lab aims to build your first HTML5 live stream (HLS) player.
 
 There are many open source alternatives. You can try to use as Video.js player as a startup: https://github.com/videojs/video.js
 or try a live example: https://jsbin.com/gejugat/edit?html,output
 
 # Requirements for repository
-  - You have to clone this repository and make two branches (master and develop).
-  - The develop branch should contain commits of every new feature of the player.
-  - When all features will be ready you have to merge the development branch to the master.
-
+  - You have to clone this repository and make two branches (master and develop). - Done
+  - The develop branch should contain commits of every new feature of the player. - Done
+  - When all features will be ready you have to merge the development branch to the master. -Done
+ 
 # Requirements for player
   - You have to find an HLS player and embed it into index.html file.
   - The player should be able to run "Big Bunny" video from this URL: https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8
